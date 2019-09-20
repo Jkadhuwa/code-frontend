@@ -1,0 +1,36 @@
+@import './partials/Base';
+
+.main-container {
+  h3 {
+    margin-left: 20em;
+    margin-top: 4em;
+  }
+  .text-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8em;
+    align-items: center;
+  
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .formGroup {
+      input {
+        width: 30em;
+        height: 2em;
+        border: none;
+        border-bottom: 1px solid #c7c4c4;
+        margin-top: 0.5em;
+      }
+    }
+  }
+  .vl {
+    border-left: 1px solid #c7c4c4;
+    height: 270px;
+    margin-left: 25em;
+    margin-top: -14em;
+  }
+}

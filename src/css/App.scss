@@ -1,0 +1,27 @@
+@import './partials/Base';
+
+nav {
+  background-color: #0f0e0e;
+  height: 4.438em;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  h3 {
+    margin: auto;
+    margin-left: 30px;
+    justify-content: center;
+    color: #ffffff;
+  }
+  ul {
+    margin: auto;
+    display: flex;
+    margin-right: 30px;
+    color: #ffffff;
+    li {
+      margin-left: 40px;
+      list-style: none;
+      justify-content: center;
+     
+    }
+  }
+}
