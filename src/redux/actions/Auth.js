@@ -34,7 +34,7 @@ export const register = ({
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/v1/users/signup",
+      "https://uninet-blogs-backend.herokuapp.com/api/v1/users/signup",
       body,
       config
     );
@@ -66,7 +66,7 @@ export const login = ({ email, password }) => async dispatch => {
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/v1/users/login",
+      "https://uninet-blogs-backend.herokuapp.com/api/v1/users/login",
       body,
       config
     );
