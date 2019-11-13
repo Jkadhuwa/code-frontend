@@ -10,9 +10,7 @@
     "dev": "npm run dev --prefix ../coding-geeks-ah-backendTest",
     "server": "concurrently \" webpack-dev-server --mode=development\" \"npm run dev\"",
     "test": "jest",
-    "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
