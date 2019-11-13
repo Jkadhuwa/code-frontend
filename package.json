@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "webpack-dev-server": "webpack-dev-server",
     "dev": "npm run dev --prefix ../coding-geeks-ah-backendTest",
     "server": "concurrently \" webpack-dev-server --mode=development\" \"npm run dev\"",
