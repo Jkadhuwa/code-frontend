@@ -21,7 +21,6 @@ export default (state = initialState, action) => {
         registered: true
       };
     case LOGIN_SUCCESS:
-      // const { username, email } = payload.data;
       return {
         ...state,
         isAuthenticated: true,

@@ -31,7 +31,7 @@ export const createBlog = ({
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/v1/articles/",
+      "https://uninet-blogs-backend.herokuapp.com/api/v1/articles/",
       formData,
       config
     );
@@ -53,7 +53,7 @@ export const createBlog = ({
 
 export const getBlogs = () => async dispatch => {
   try {
-    const { data } = await axios.get("http://localhost:5000/api/v1/articles");
+    const { data } = await axios.get("https://uninet-blogs-backend.herokuapp.com/api/v1/articles");
 
     dispatch({
       type: GET_BLOG_SUCCESS,
