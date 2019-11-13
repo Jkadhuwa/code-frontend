@@ -21,12 +21,15 @@ module.exports = {
           },
           { loader: 'sass-loader' }
         ]
-    },
+      },
       { test: /\.(js)$/, use: 'babel-loader' },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
   mode: 'development',
+  node: {
+    fs: 'empty'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html'
