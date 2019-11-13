@@ -1,24 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import jwt from "jwt-decode";
 const GuestUser = () => {
   return (
-    <nav>
+    <nav class="navbar navbar-default navbar-fixed-top" id="mNavbar">
       <h3>
-        <Link to={'/'}>Authors Haven</Link>
+        <Link to={"/"}>UniNet Blogs</Link>
       </h3>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={'/create'}>Create</Link>
+          <Link to={"/signin"}>Sign In</Link>
         </li>
         <li>
-          <Link to={'/signin'}>Sign In</Link>
-        </li>
-        <li>
-          <Link to={'/signup'}>Sign Up</Link>
+          <Link to={"/signup"}>Sign Up</Link>
         </li>
       </ul>
     </nav>
@@ -27,27 +24,31 @@ const GuestUser = () => {
 
 const LoggedIn = () => {
   return (
-    <nav>
+    <nav class="navbar navbar-default navbar-fixed-top" id="mNavbar">
       <h3>
-        <Link to={'/'}>Authors Haven</Link>
+        <Link to={"/"}>UniNet Blogs</Link>
       </h3>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={'/create'}>Create</Link>
+          <Link to={"/create"}>Create</Link>
         </li>
         <li>
-          <Link to={'/'}>Logout</Link>
+          <Link to={"/logout"}>Logout</Link>
         </li>
       </ul>
     </nav>
   );
 };
-
-const Navbar = ({ loggedIn }) => {
-  if (loggedIn) {
+const token = localStorage.getItem("token");
+let isAuthenticated;
+if (jwt(token)) {
+  isAuthenticated = true;
+}
+const Navbar = () => {
+  if (isAuthenticated) {
     return <LoggedIn />;
   }
   return <GuestUser />;

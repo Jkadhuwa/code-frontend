@@ -1,75 +1,82 @@
-import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
-
-const Register = ({onChange, onSubmit, data}) => {
-
+import React from 'react';
+import { Button, Form, Label, Input, Col } from 'reactstrap';
+const Register = ({ onChange, onSubmit, data }) => {
   return (
-    <Fragment>
-      <div className="text-header">
-        <h1>Sign Up</h1>
-        <p>
-          Already have an account? <Link to={'/signin'}>Sign In</Link>
-        </p>
-      </div>
-      <form className="form" onSubmit={onSubmit}>
-        <div className="formGroup">
-          <input
-            type="text"
+    <Form onSubmit={onSubmit}>
+      <div className="form-group">
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="firstName">First Name</Label>
+          <Input
+            type="firstName"
             name="firstName"
+            id="firstName"
             value={data.firstName}
-            placeholder="First Name"
+            placeholder="John"
             onChange={onChange}
           />
-        </div>
-        <div className="formGroup">
-          <input
-            type="text"
+        </Col>
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="lastName">Last Name</Label>
+          <Input
+            type="lastName"
             name="lastName"
-            placeholder="Last Name"
+            id="lastName"
             value={data.lastName}
+            placeholder="Doe"
             onChange={onChange}
           />
-        </div>
-        <div className="formGroup">
-          <input
-            name="text"
-            type="username"
-            placeholder="Username"
-            value={data.username}
-            onChange={ onChange}
+        </Col>
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="userName">Username</Label>
+          <Input
+            type="userName"
+            name="userName"
+            id="userName"
+            value={data.userName}
+            placeholder="JDoe12"
+            onChange={onChange}
           />
-        </div>
-        <div className="formGroup">
-          <input
+        </Col>
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="email">Email</Label>
+          <Input
             type="email"
             name="email"
-            placeholder="Email"
+            id="email"
             value={data.email}
+            placeholder="example@gmail.com"
             onChange={onChange}
           />
-        </div>
-        <div className="formGroup">
-          <input
-            type="passoword"
+        </Col>
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="password">Password</Label>
+          <Input
+            type="password"
             name="password"
-            placeholder="Password"
+            id="password"
             value={data.password}
+            placeholder="jkadhuwa12345678"
             onChange={onChange}
           />
-        </div>
-        <div className="formGroup">
-          <input
-            type="passoword"
+        </Col>
+        <Col sm={{ size: 6, offset: 3 }}>
+          <Label for="confirmPassword">Confirm Password</Label>
+          <Input
+            type="password"
             name="confirmPassword"
-            placeholder="Confirm Password"
+            id="confirmPassword"
             value={data.confirmPassword}
+            placeholder="jkadhuwa12345678"
             onChange={onChange}
           />
+        </Col>
+        <div className="row justify-content-center mt-3">
+          <Button color="primary" type="submit">
+            Submit
+          </Button>
         </div>
-        <input type="submit" className="btn btn-primary" value="Sign Up" />
-        <div className="vl"></div>
-      </form>
-    </Fragment>
+      </div>
+    </Form>
   );
 };
 
