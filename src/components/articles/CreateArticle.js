@@ -32,7 +32,7 @@ const CreateArticle = ({ publishBlog }) => {
   const { title, description, body } = formData;
   const token = localStorage.getItem("token");
   let isAuthenticated;
-  if (jwt(token)) {
+  if (token) {
     isAuthenticated = true;
   }
   if (!isAuthenticated) {
