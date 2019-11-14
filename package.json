@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && babel-node prod-server.js",
+    "start": "babel-node prod-server.js",
     "webpack-dev-server": "webpack-dev-server",
     "postinstall": "webpack -p",
     "dev": "npm run dev --prefix ../coding-geeks-ah-backendTest",
     "server": "concurrently \" webpack-dev-server --mode=development\" \"npm run dev\"",
-    "test": "jest",
-    "build": "webpack --mode production"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
