@@ -44,7 +44,7 @@ const LoggedIn = () => {
 };
 const token = localStorage.getItem("token");
 let isAuthenticated;
-if (jwt(token)) {
+if (token) {
   isAuthenticated = true;
 }
 const Navbar = () => {
